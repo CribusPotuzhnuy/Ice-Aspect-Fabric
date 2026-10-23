@@ -1,0 +1,26 @@
+package net.cribus.iceaspect.datagen;
+
+import net.cribus.iceaspect.enchantment.ModEnchantments;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.EnchantmentTags;
+
+import java.util.concurrent.CompletableFuture;
+
+public class ModEnchantmentTagProvider extends FabricTagProvider<Enchantment> {
+    public ModEnchantmentTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+        super(output, RegistryKeys.ENCHANTMENT, registriesFuture);
+    }
+
+    @Override
+    protected void configure(RegistryWrapper.WrapperLookup registries) {
+        getOrCreateTagBuilder(EnchantmentTags.IN_ENCHANTING_TABLE)
+                .add(ModEnchantments.ICE_ASPECT);
+
+        getOrCreateTagBuilder(EnchantmentTags.NON_TREASURE)
+                .add(ModEnchantments.ICE_ASPECT);
+    }
+}

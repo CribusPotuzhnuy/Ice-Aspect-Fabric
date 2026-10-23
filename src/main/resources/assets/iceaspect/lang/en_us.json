@@ -1,0 +1,9 @@
+{
+  "effect.iceaspect.freezing": "Freezing",
+
+  "item.minecraft.potion.effect.freezing_potion": "Freezing Potion",
+  "item.minecraft.splash_potion.effect.freezing_potion": "Freezing Splash Potion",
+  "item.minecraft.lingering_potion.effect.freezing_potion": "Freezing Lingering Potion",
+
+  "enchantment.iceaspect.ice_aspect": "Ice Aspect"
+}

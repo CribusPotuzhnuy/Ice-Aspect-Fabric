@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "iceaspect",
+	"version": "${version}",
+	"name": "Ice aspect",
+	"description": "Adds an enchantment equal to fire aspect, but with freezing.",
+	"authors": [
+		"VoicingCribus73"
+	],
+	"contact": {
+		"homepage": "https://cribus.net",
+		"sources": "https://github.com/CribusPotuzhnuy/Ice-Aspect-Fabric-1.21.X"
+	},
+	"license": "MIT",
+	"icon": "assets/iceaspect/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.cribus.iceaspect.IceAspect"
+		],
+		"fabric-datagen": [
+			"net.cribus.iceaspect.IceAspectDataGenerator"
+		],
+		"client": [
+			"net.cribus.iceaspect.IceAspectClient"
+		]
+	},
+	"mixins": [
+		"iceaspect.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
