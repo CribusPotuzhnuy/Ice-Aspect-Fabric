@@ -11,7 +11,7 @@ import net.minecraft.util.Identifier;
 
 public class ModPotions {
     public static final RegistryEntry<Potion> FREEZING_POTION = registerPotion("freezing_potion",
-            new Potion(new StatusEffectInstance(ModEffects.FREEZING, 900, 0)));
+            new Potion("freezing_potion", new StatusEffectInstance(ModEffects.FREEZING, 900, 0)));
 
     private static RegistryEntry<Potion> registerPotion(String name, Potion potion) {
         return Registry.registerReference(Registries.POTION, Identifier.of(IceAspect.MOD_ID, name), potion);

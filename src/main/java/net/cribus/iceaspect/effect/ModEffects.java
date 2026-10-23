@@ -12,7 +12,7 @@ import net.minecraft.util.Identifier;
 
 public class ModEffects {
     public static final RegistryEntry<StatusEffect> FREEZING = registerStatusEffect("freezing",
-            new FreezingEffect(StatusEffectCategory.HARMFUL, 0x80e5ef).addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,
+            new FreezingEffect(StatusEffectCategory.HARMFUL, 0x80e5ef).addAttributeModifier(EntityAttributes.MOVEMENT_SPEED,
                     Identifier.of(IceAspect.MOD_ID, "freezing"
                     ),-0.50f, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
 

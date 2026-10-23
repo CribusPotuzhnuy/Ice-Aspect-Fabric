@@ -12,7 +12,7 @@ public class FreezingEffect extends StatusEffect {
     }
 
     @Override
-    public boolean applyUpdateEffect(LivingEntity entity, int amplifier) {
+    public boolean applyUpdateEffect(ServerWorld world, LivingEntity entity, int amplifier) {
         if (entity.isOnFire()) {
             entity.removeStatusEffect(ModEffects.FREEZING);
             entity.setFrozenTicks(0);
@@ -21,7 +21,7 @@ public class FreezingEffect extends StatusEffect {
         entity.setFrozenTicks(Math.max(entity.getFrozenTicks(), 300));
 
 
-        return super.applyUpdateEffect(entity, amplifier);
+        return super.applyUpdateEffect(world, entity, amplifier);
     }
 
     @Override

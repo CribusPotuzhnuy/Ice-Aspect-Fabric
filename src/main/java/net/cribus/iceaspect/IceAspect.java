@@ -10,6 +10,7 @@ import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.minecraft.entity.damage.DamageTypes;
 import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Identifier;
 
 import org.slf4j.Logger;
@@ -39,7 +40,7 @@ public class IceAspect implements ModInitializer {
 					return true;
 				}
 
-				entity.damage(source, 1.5f);
+				entity.damage((ServerWorld) entity.getWorld(), source, 1.5f);
 				return false;
 			}
 			return true;
