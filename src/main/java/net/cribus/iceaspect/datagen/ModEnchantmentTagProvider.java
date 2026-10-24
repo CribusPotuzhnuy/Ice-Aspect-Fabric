@@ -17,10 +17,10 @@ public class ModEnchantmentTagProvider extends FabricTagProvider<Enchantment> {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup registries) {
-        getOrCreateTagBuilder(EnchantmentTags.IN_ENCHANTING_TABLE)
+        builder(EnchantmentTags.IN_ENCHANTING_TABLE)
                 .add(ModEnchantments.ICE_ASPECT);
 
-        getOrCreateTagBuilder(EnchantmentTags.NON_TREASURE)
+        builder(EnchantmentTags.NON_TREASURE)
                 .add(ModEnchantments.ICE_ASPECT);
     }
 }
