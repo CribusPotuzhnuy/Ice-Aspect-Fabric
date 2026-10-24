@@ -25,7 +25,6 @@ public class ModEnchantments {
 
         register(registerable, ICE_ASPECT, Enchantment.builder(Enchantment.definition(
                 items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
-                items.getOrThrow(ItemTags.SWORD_ENCHANTABLE),
                 2,
                 2,
                 Enchantment.leveledCost(10, 20),
