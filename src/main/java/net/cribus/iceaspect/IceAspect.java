@@ -40,7 +40,7 @@ public class IceAspect implements ModInitializer {
 					return true;
 				}
 
-				entity.damage((ServerWorld) entity.getWorld(), source, 1.5f);
+				entity.damage((ServerWorld) entity.getEntityWorld(), source, 1.5f);
 				return false;
 			}
 			return true;
